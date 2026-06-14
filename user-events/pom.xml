@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.finflow.schemas</groupId>
+        <artifactId>finflow-schemas</artifactId>
+        <version>1.0.0</version>
+    </parent>
+
+    <artifactId>user-events</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.19.2</version>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>org.jsonschema2pojo</groupId>
+                <artifactId>jsonschema2pojo-maven-plugin</artifactId>
+                <version>1.2.2</version>
+
+                <configuration>
+                    <sourceDirectory>
+                        ${project.basedir}/src/main/jsonschema
+                    </sourceDirectory>
+
+                    <targetPackage>
+                        com.finflow.events
+                    </targetPackage>
+
+                    <usePrimitives>false</usePrimitives>
+                    <includeConstructors>true</includeConstructors>
+                    <includeGetters>true</includeGetters>
+                    <includeSetters>true</includeSetters>
+                    <useJakartaValidation>true</useJakartaValidation>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+
+</project>
