@@ -1,5 +1,5 @@
 
-package com.finflow.events.user;
+package com.finflow.events.user.create;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
