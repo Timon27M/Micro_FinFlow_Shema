@@ -1,2 +1,3 @@
-com\finflow\events\user\UserCreatedEvent.class
-com\finflow\events\userrecoverer\UserCreatedFailedEvent.class
+com\finflow\events\user\create\UserCreateFailedEvent.class
+com\finflow\events\EventTopics.class
+com\finflow\events\user\create\UserCreatedEvent.class
