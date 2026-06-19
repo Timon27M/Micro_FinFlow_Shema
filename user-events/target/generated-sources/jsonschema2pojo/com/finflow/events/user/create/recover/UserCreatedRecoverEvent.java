@@ -1,5 +1,5 @@
 
-package com.finflow.events.user.create;
+package com.finflow.events.user.create.recover;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -29,7 +29,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "phone"
 })
 @Generated("jsonschema2pojo")
-public class UserCreatedEvent {
+public class UserCreatedRecoverEvent {
 
     @JsonProperty("eventId")
     private UUID eventId;
@@ -75,10 +75,10 @@ public class UserCreatedEvent {
      * No args constructor for use in serialization
      * 
      */
-    public UserCreatedEvent() {
+    public UserCreatedRecoverEvent() {
     }
 
-    public UserCreatedEvent(UUID eventId, UUID userId, String email, String firstName, String lastName, String phone) {
+    public UserCreatedRecoverEvent(UUID eventId, UUID userId, String email, String firstName, String lastName, String phone) {
         super();
         this.eventId = eventId;
         this.userId = userId;
@@ -211,7 +211,7 @@ public class UserCreatedEvent {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(UserCreatedEvent.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
+        sb.append(UserCreatedRecoverEvent.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
         sb.append("eventId");
         sb.append('=');
         sb.append(((this.eventId == null)?"<null>":this.eventId));
@@ -266,10 +266,10 @@ public class UserCreatedEvent {
         if (other == this) {
             return true;
         }
-        if ((other instanceof UserCreatedEvent) == false) {
+        if ((other instanceof UserCreatedRecoverEvent) == false) {
             return false;
         }
-        UserCreatedEvent rhs = ((UserCreatedEvent) other);
+        UserCreatedRecoverEvent rhs = ((UserCreatedRecoverEvent) other);
         return ((((((((this.eventId == rhs.eventId)||((this.eventId!= null)&&this.eventId.equals(rhs.eventId)))&&((this.firstName == rhs.firstName)||((this.firstName!= null)&&this.firstName.equals(rhs.firstName))))&&((this.lastName == rhs.lastName)||((this.lastName!= null)&&this.lastName.equals(rhs.lastName))))&&((this.phone == rhs.phone)||((this.phone!= null)&&this.phone.equals(rhs.phone))))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))))&&((this.userId == rhs.userId)||((this.userId!= null)&&this.userId.equals(rhs.userId))))&&((this.email == rhs.email)||((this.email!= null)&&this.email.equals(rhs.email))));
     }
 
