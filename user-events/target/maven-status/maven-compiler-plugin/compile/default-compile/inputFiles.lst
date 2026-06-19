@@ -1,3 +1,5 @@
 C:\Users\1\Desktop\dev_main\devJava\FinFlow\finflow-schemas\user-events\src\main\java\com\finflow\events\EventTopics.java
+C:\Users\1\Desktop\dev_main\devJava\FinFlow\finflow-schemas\user-events\target\generated-sources\jsonschema2pojo\com\finflow\events\user\create\recover\UserCreatedRecoverEvent.java
+C:\Users\1\Desktop\dev_main\devJava\FinFlow\finflow-schemas\user-events\target\generated-sources\jsonschema2pojo\com\finflow\events\user\create\recover\UserCreateRecoverFailedEvent.java
 C:\Users\1\Desktop\dev_main\devJava\FinFlow\finflow-schemas\user-events\target\generated-sources\jsonschema2pojo\com\finflow\events\user\create\UserCreatedEvent.java
 C:\Users\1\Desktop\dev_main\devJava\FinFlow\finflow-schemas\user-events\target\generated-sources\jsonschema2pojo\com\finflow\events\user\create\UserCreateFailedEvent.java

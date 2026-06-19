@@ -1,5 +1,5 @@
 
-package com.finflow.events.user.create;
+package com.finflow.events.user.create.recover;
 
 import java.time.Instant;
 import java.util.LinkedHashMap;
@@ -41,7 +41,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
     "maxRetryCount"
 })
 @Generated("jsonschema2pojo")
-public class UserCreateFailedEvent {
+public class UserCreateRecoverFailedEvent {
 
     @JsonProperty("eventId")
     private UUID eventId;
@@ -164,7 +164,7 @@ public class UserCreateFailedEvent {
      * No args constructor for use in serialization
      * 
      */
-    public UserCreateFailedEvent() {
+    public UserCreateRecoverFailedEvent() {
     }
 
     /**
@@ -200,7 +200,7 @@ public class UserCreateFailedEvent {
      * @param email
      *     Email пользователя.
      */
-    public UserCreateFailedEvent(UUID eventId, String sourceService, String sourceTopic, Integer sourcePartition, Long sourceOffset, Instant sourceTimestamp, UUID userId, String email, String firstName, String lastName, String phone, String errorType, String errorMessage, String errorStack, Integer retryCount, Integer maxRetryCount) {
+    public UserCreateRecoverFailedEvent(UUID eventId, String sourceService, String sourceTopic, Integer sourcePartition, Long sourceOffset, Instant sourceTimestamp, UUID userId, String email, String firstName, String lastName, String phone, String errorType, String errorMessage, String errorStack, Integer retryCount, Integer maxRetryCount) {
         super();
         this.eventId = eventId;
         this.sourceService = sourceService;
@@ -527,7 +527,7 @@ public class UserCreateFailedEvent {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append(UserCreateFailedEvent.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
+        sb.append(UserCreateRecoverFailedEvent.class.getName()).append('@').append(Integer.toHexString(System.identityHashCode(this))).append('[');
         sb.append("eventId");
         sb.append('=');
         sb.append(((this.eventId == null)?"<null>":this.eventId));
@@ -632,10 +632,10 @@ public class UserCreateFailedEvent {
         if (other == this) {
             return true;
         }
-        if ((other instanceof UserCreateFailedEvent) == false) {
+        if ((other instanceof UserCreateRecoverFailedEvent) == false) {
             return false;
         }
-        UserCreateFailedEvent rhs = ((UserCreateFailedEvent) other);
+        UserCreateRecoverFailedEvent rhs = ((UserCreateRecoverFailedEvent) other);
         return ((((((((((((((((((this.eventId == rhs.eventId)||((this.eventId!= null)&&this.eventId.equals(rhs.eventId)))&&((this.sourcePartition == rhs.sourcePartition)||((this.sourcePartition!= null)&&this.sourcePartition.equals(rhs.sourcePartition))))&&((this.lastName == rhs.lastName)||((this.lastName!= null)&&this.lastName.equals(rhs.lastName))))&&((this.sourceTopic == rhs.sourceTopic)||((this.sourceTopic!= null)&&this.sourceTopic.equals(rhs.sourceTopic))))&&((this.sourceTimestamp == rhs.sourceTimestamp)||((this.sourceTimestamp!= null)&&this.sourceTimestamp.equals(rhs.sourceTimestamp))))&&((this.errorType == rhs.errorType)||((this.errorType!= null)&&this.errorType.equals(rhs.errorType))))&&((this.retryCount == rhs.retryCount)||((this.retryCount!= null)&&this.retryCount.equals(rhs.retryCount))))&&((this.sourceOffset == rhs.sourceOffset)||((this.sourceOffset!= null)&&this.sourceOffset.equals(rhs.sourceOffset))))&&((this.errorMessage == rhs.errorMessage)||((this.errorMessage!= null)&&this.errorMessage.equals(rhs.errorMessage))))&&((this.maxRetryCount == rhs.maxRetryCount)||((this.maxRetryCount!= null)&&this.maxRetryCount.equals(rhs.maxRetryCount))))&&((this.userId == rhs.userId)||((this.userId!= null)&&this.userId.equals(rhs.userId))))&&((this.firstName == rhs.firstName)||((this.firstName!= null)&&this.firstName.equals(rhs.firstName))))&&((this.phone == rhs.phone)||((this.phone!= null)&&this.phone.equals(rhs.phone))))&&((this.additionalProperties == rhs.additionalProperties)||((this.additionalProperties!= null)&&this.additionalProperties.equals(rhs.additionalProperties))))&&((this.sourceService == rhs.sourceService)||((this.sourceService!= null)&&this.sourceService.equals(rhs.sourceService))))&&((this.errorStack == rhs.errorStack)||((this.errorStack!= null)&&this.errorStack.equals(rhs.errorStack))))&&((this.email == rhs.email)||((this.email!= null)&&this.email.equals(rhs.email))));
     }
 
