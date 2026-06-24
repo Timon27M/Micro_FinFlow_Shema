@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package com.finflow.schemas.grpc.account;
+
+option java_multiple_files = true;
+option java_package = "com.finflow.schemas.grpc.account";
+option java_outer_classname = "AccountServiceProto";
+
+service AccountService {
+  rpc CreateAccount(CreateAccountRequest)
+      returns (CreateAccountResponse);
+}
+
+message CreateAccountRequest {
+  string user_id = 1;
+}
+
+message CreateAccountResponse {
+  string account_id = 1;
+  string account_number = 2;
+  bool success = 3;
+  string message = 4;
+}

@@ -12,7 +12,8 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>user-events</module>
+        <module>kafka/user-events</module>
+        <module>grpc/account-service</module>
     </modules>
 
 </project>
