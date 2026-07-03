@@ -21,10 +21,20 @@ public final class AccountServiceProto {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_finflow_schemas_grpc_account_CreateAccountRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_finflow_schemas_grpc_account_AddToCacheAccountDataRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_finflow_schemas_grpc_account_AddToCacheAccountDataRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_finflow_schemas_grpc_account_CreateAccountResponse_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_finflow_schemas_grpc_account_CreateAccountResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_finflow_schemas_grpc_account_AddToCacheAccountDataResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_finflow_schemas_grpc_account_AddToCacheAccountDataResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -36,15 +46,22 @@ public final class AccountServiceProto {
     java.lang.String[] descriptorData = {
       "\n\025account-service.proto\022 com.finflow.sch" +
       "emas.grpc.account\"\'\n\024CreateAccountReques" +
-      "t\022\017\n\007user_id\030\001 \001(\t\"e\n\025CreateAccountRespo" +
-      "nse\022\022\n\naccount_id\030\001 \001(\t\022\026\n\016account_numbe" +
-      "r\030\002 \001(\t\022\017\n\007success\030\003 \001(\010\022\017\n\007message\030\004 \001(" +
-      "\t2\223\001\n\016AccountService\022\200\001\n\rCreateAccount\0226" +
-      ".com.finflow.schemas.grpc.account.Create" +
-      "AccountRequest\0327.com.finflow.schemas.grp" +
-      "c.account.CreateAccountResponseB9\n com.f" +
-      "inflow.schemas.grpc.accountB\023AccountServ" +
-      "iceProtoP\001b\006proto3"
+      "t\022\017\n\007user_id\030\001 \001(\t\"/\n\034AddToCacheAccountD" +
+      "ataRequest\022\017\n\007user_id\030\001 \001(\t\"e\n\025CreateAcc" +
+      "ountResponse\022\022\n\naccount_id\030\001 \001(\t\022\026\n\016acco" +
+      "unt_number\030\002 \001(\t\022\017\n\007success\030\003 \001(\010\022\017\n\007mes" +
+      "sage\030\004 \001(\t\"A\n\035AddToCacheAccountDataRespo" +
+      "nse\022\017\n\007success\030\001 \001(\010\022\017\n\007message\030\002 \001(\t2\256\002" +
+      "\n\016AccountService\022\200\001\n\rCreateAccount\0226.com" +
+      ".finflow.schemas.grpc.account.CreateAcco" +
+      "untRequest\0327.com.finflow.schemas.grpc.ac" +
+      "count.CreateAccountResponse\022\230\001\n\025AddToCac" +
+      "heAccountData\022>.com.finflow.schemas.grpc" +
+      ".account.AddToCacheAccountDataRequest\032?." +
+      "com.finflow.schemas.grpc.account.AddToCa" +
+      "cheAccountDataResponseB9\n com.finflow.sc" +
+      "hemas.grpc.accountB\023AccountServiceProtoP" +
+      "\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -56,12 +73,24 @@ public final class AccountServiceProto {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_finflow_schemas_grpc_account_CreateAccountRequest_descriptor,
         new java.lang.String[] { "UserId", });
-    internal_static_com_finflow_schemas_grpc_account_CreateAccountResponse_descriptor =
+    internal_static_com_finflow_schemas_grpc_account_AddToCacheAccountDataRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
+    internal_static_com_finflow_schemas_grpc_account_AddToCacheAccountDataRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_finflow_schemas_grpc_account_AddToCacheAccountDataRequest_descriptor,
+        new java.lang.String[] { "UserId", });
+    internal_static_com_finflow_schemas_grpc_account_CreateAccountResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
     internal_static_com_finflow_schemas_grpc_account_CreateAccountResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_finflow_schemas_grpc_account_CreateAccountResponse_descriptor,
         new java.lang.String[] { "AccountId", "AccountNumber", "Success", "Message", });
+    internal_static_com_finflow_schemas_grpc_account_AddToCacheAccountDataResponse_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_com_finflow_schemas_grpc_account_AddToCacheAccountDataResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_finflow_schemas_grpc_account_AddToCacheAccountDataResponse_descriptor,
+        new java.lang.String[] { "Success", "Message", });
   }
 
   // @@protoc_insertion_point(outer_class_scope)

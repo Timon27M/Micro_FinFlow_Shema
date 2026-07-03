@@ -46,6 +46,37 @@ public final class AccountServiceGrpc {
     return getCreateAccountMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<com.finflow.schemas.grpc.account.AddToCacheAccountDataRequest,
+      com.finflow.schemas.grpc.account.AddToCacheAccountDataResponse> getAddToCacheAccountDataMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "AddToCacheAccountData",
+      requestType = com.finflow.schemas.grpc.account.AddToCacheAccountDataRequest.class,
+      responseType = com.finflow.schemas.grpc.account.AddToCacheAccountDataResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<com.finflow.schemas.grpc.account.AddToCacheAccountDataRequest,
+      com.finflow.schemas.grpc.account.AddToCacheAccountDataResponse> getAddToCacheAccountDataMethod() {
+    io.grpc.MethodDescriptor<com.finflow.schemas.grpc.account.AddToCacheAccountDataRequest, com.finflow.schemas.grpc.account.AddToCacheAccountDataResponse> getAddToCacheAccountDataMethod;
+    if ((getAddToCacheAccountDataMethod = AccountServiceGrpc.getAddToCacheAccountDataMethod) == null) {
+      synchronized (AccountServiceGrpc.class) {
+        if ((getAddToCacheAccountDataMethod = AccountServiceGrpc.getAddToCacheAccountDataMethod) == null) {
+          AccountServiceGrpc.getAddToCacheAccountDataMethod = getAddToCacheAccountDataMethod =
+              io.grpc.MethodDescriptor.<com.finflow.schemas.grpc.account.AddToCacheAccountDataRequest, com.finflow.schemas.grpc.account.AddToCacheAccountDataResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "AddToCacheAccountData"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.finflow.schemas.grpc.account.AddToCacheAccountDataRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.finflow.schemas.grpc.account.AddToCacheAccountDataResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new AccountServiceMethodDescriptorSupplier("AddToCacheAccountData"))
+              .build();
+        }
+      }
+    }
+    return getAddToCacheAccountDataMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -100,6 +131,13 @@ public final class AccountServiceGrpc {
         io.grpc.stub.StreamObserver<com.finflow.schemas.grpc.account.CreateAccountResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateAccountMethod(), responseObserver);
     }
+
+    /**
+     */
+    default void addToCacheAccountData(com.finflow.schemas.grpc.account.AddToCacheAccountDataRequest request,
+        io.grpc.stub.StreamObserver<com.finflow.schemas.grpc.account.AddToCacheAccountDataResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getAddToCacheAccountDataMethod(), responseObserver);
+    }
   }
 
   /**
@@ -136,6 +174,14 @@ public final class AccountServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getCreateAccountMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     */
+    public void addToCacheAccountData(com.finflow.schemas.grpc.account.AddToCacheAccountDataRequest request,
+        io.grpc.stub.StreamObserver<com.finflow.schemas.grpc.account.AddToCacheAccountDataResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getAddToCacheAccountDataMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -159,6 +205,13 @@ public final class AccountServiceGrpc {
     public com.finflow.schemas.grpc.account.CreateAccountResponse createAccount(com.finflow.schemas.grpc.account.CreateAccountRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getCreateAccountMethod(), getCallOptions(), request);
+    }
+
+    /**
+     */
+    public com.finflow.schemas.grpc.account.AddToCacheAccountDataResponse addToCacheAccountData(com.finflow.schemas.grpc.account.AddToCacheAccountDataRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getAddToCacheAccountDataMethod(), getCallOptions(), request);
     }
   }
 
@@ -185,9 +238,18 @@ public final class AccountServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getCreateAccountMethod(), getCallOptions()), request);
     }
+
+    /**
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.finflow.schemas.grpc.account.AddToCacheAccountDataResponse> addToCacheAccountData(
+        com.finflow.schemas.grpc.account.AddToCacheAccountDataRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getAddToCacheAccountDataMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_CREATE_ACCOUNT = 0;
+  private static final int METHODID_ADD_TO_CACHE_ACCOUNT_DATA = 1;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -209,6 +271,10 @@ public final class AccountServiceGrpc {
         case METHODID_CREATE_ACCOUNT:
           serviceImpl.createAccount((com.finflow.schemas.grpc.account.CreateAccountRequest) request,
               (io.grpc.stub.StreamObserver<com.finflow.schemas.grpc.account.CreateAccountResponse>) responseObserver);
+          break;
+        case METHODID_ADD_TO_CACHE_ACCOUNT_DATA:
+          serviceImpl.addToCacheAccountData((com.finflow.schemas.grpc.account.AddToCacheAccountDataRequest) request,
+              (io.grpc.stub.StreamObserver<com.finflow.schemas.grpc.account.AddToCacheAccountDataResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -235,6 +301,13 @@ public final class AccountServiceGrpc {
               com.finflow.schemas.grpc.account.CreateAccountRequest,
               com.finflow.schemas.grpc.account.CreateAccountResponse>(
                 service, METHODID_CREATE_ACCOUNT)))
+        .addMethod(
+          getAddToCacheAccountDataMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              com.finflow.schemas.grpc.account.AddToCacheAccountDataRequest,
+              com.finflow.schemas.grpc.account.AddToCacheAccountDataResponse>(
+                service, METHODID_ADD_TO_CACHE_ACCOUNT_DATA)))
         .build();
   }
 
@@ -284,6 +357,7 @@ public final class AccountServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new AccountServiceFileDescriptorSupplier())
               .addMethod(getCreateAccountMethod())
+              .addMethod(getAddToCacheAccountDataMethod())
               .build();
         }
       }
